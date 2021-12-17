@@ -23,7 +23,6 @@ let package = Package(
         .target(
             name: "Refreshment",
             dependencies: [],
-            path: "Refreshment",
-            publicHeadersPath: "Refreshment"),
+            path: "Refreshment"),
     ]
 )
