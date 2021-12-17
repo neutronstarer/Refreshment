@@ -7,7 +7,7 @@
 
 #import <objc/runtime.h>
 
-#import "Refreshment.h"
+#import "Refreshment+RefreshmentPublic.h"
 #import "Refreshment+RefreshmentPrivate.h"
 #import "UIScrollView+RefreshmentPrivate.h"
 

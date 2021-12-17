@@ -5,7 +5,7 @@
 //  Created by neutronstarer on 2021/11/2.
 //
 
-#import <Refreshment/Refreshment.h>
+#import "Refreshment+RefreshmentPublic.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

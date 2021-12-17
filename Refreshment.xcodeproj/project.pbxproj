@@ -27,6 +27,7 @@
 		CE05243C272AC82A00F91C56 /* VerticalLoadmoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242A272AC82900F91C56 /* VerticalLoadmoreView.m */; };
 		CE05243D272AC82A00F91C56 /* HorizontalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */; };
 		CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242F272AC82900F91C56 /* NSString+Category.m */; };
+		CE2775E8276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */; };
 		CE4AD77327311521004B9822 /* ObverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77227311521004B9822 /* ObverseTableViewController.swift */; };
 		CE4AD77527311D9F004B9822 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77427311D9F004B9822 /* TableViewCell.swift */; };
 		CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */; };
@@ -102,6 +103,10 @@
 		CE05242D272AC82900F91C56 /* HorizontalLoadmoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalLoadmoreView.h; sourceTree = "<group>"; };
 		CE05242E272AC82900F91C56 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE05242F272AC82900F91C56 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPublic.h"; sourceTree = "<group>"; };
+		CE2775EA276CFFFD006ADA01 /* RefreshmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshmentView.h; sourceTree = "<group>"; };
+		CE2775EB276CFFFD006ADA01 /* UIScrollView+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refreshment.h"; sourceTree = "<group>"; };
+		CE2775EC276CFFFD006ADA01 /* Refreshment+RefreshmentPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPublic.h"; sourceTree = "<group>"; };
 		CE4AD77127311520004B9822 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE4AD77227311521004B9822 /* ObverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObverseTableViewController.swift; sourceTree = "<group>"; };
 		CE4AD77427311D9F004B9822 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -202,6 +207,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE2775E9276CFF51006ADA01 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CE2775EC276CFFFD006ADA01 /* Refreshment+RefreshmentPublic.h */,
+				CE2775EA276CFFFD006ADA01 /* RefreshmentView.h */,
+				CE2775EB276CFFFD006ADA01 /* UIScrollView+Refreshment.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		CECA57132728E74D00B98A5B = {
 			isa = PBXGroup;
 			children = (
@@ -226,7 +241,9 @@
 		CECA571F2728E74D00B98A5B /* Refreshment */ = {
 			isa = PBXGroup;
 			children = (
+				CE2775E9276CFF51006ADA01 /* include */,
 				CECA57202728E74D00B98A5B /* Refreshment.h */,
+				CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */,
 				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
 				CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */,
 				CEEF9B872731878B004E7832 /* RefreshmentView.h */,
@@ -247,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEF9B8427316508004E7832 /* Refreshment+RefreshmentPrivate.h in Headers */,
+				CE2775E8276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h in Headers */,
 				CECA57392728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h in Headers */,
 				CEEF9B882731878B004E7832 /* UIScrollView+Refreshment.h in Headers */,
 				CECA572E2728E74E00B98A5B /* Refreshment.h in Headers */,
