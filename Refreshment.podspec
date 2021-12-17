@@ -94,7 +94,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "Refreshment/"
   # spec.exclude_files = "Refreshment/Refreshment.h", "Refreshment/RefreshmentView.h", "Refreshment/UIScrollView+Refreshment.h"
 
-  spec.public_header_files = "Refreshment/Refreshment.h", "Refreshment/RefreshmentView.h", "Refreshment/UIScrollView+Refreshment.h"
+  spec.public_header_files = "Refreshment/Refreshment.h", "Refreshment/RefreshmentView.h", "Refreshment/UIScrollView+Refreshment.h", "Refreshment/Refreshment+RefreshmentPublic.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
