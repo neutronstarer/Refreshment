@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B267D8C392BB479B73C2C6D /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BAAE606D52EE4D141B8214C /* Pods_Example.framework */; };
+		CE0523F5272AC6E800F91C56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0523F4272AC6E800F91C56 /* AppDelegate.m */; };
+		CE0523FE272AC6E800F91C56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0523FC272AC6E800F91C56 /* Main.storyboard */; };
+		CE052400272AC6EC00F91C56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0523FF272AC6EC00F91C56 /* Assets.xcassets */; };
+		CE052403272AC6EC00F91C56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE052401272AC6EC00F91C56 /* LaunchScreen.storyboard */; };
+		CE052406272AC6EC00F91C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052405272AC6EC00F91C56 /* main.m */; };
+		CE05240B272AC74400F91C56 /* Refreshment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CECA571D2728E74D00B98A5B /* Refreshment.framework */; };
+		CE05240C272AC74400F91C56 /* Refreshment.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CECA571D2728E74D00B98A5B /* Refreshment.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE052431272AC82A00F91C56 /* VerticalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052413272AC82900F91C56 /* VerticalCollectionViewCell.m */; };
+		CE052432272AC82A00F91C56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052414272AC82900F91C56 /* ViewController.m */; };
+		CE052433272AC82A00F91C56 /* HorizontalCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052416272AC82900F91C56 /* HorizontalCollectionViewCell.m */; };
+		CE052434272AC82A00F91C56 /* HorizontalLoadmoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052419272AC82900F91C56 /* HorizontalLoadmoreView.m */; };
+		CE052435272AC82A00F91C56 /* VerticalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05241B272AC82900F91C56 /* VerticalRefreshView.m */; };
+		CE052436272AC82A00F91C56 /* HorizontalReverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05241D272AC82900F91C56 /* HorizontalReverseViewController.m */; };
+		CE052438272AC82A00F91C56 /* HorizontalObverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052423272AC82900F91C56 /* HorizontalObverseViewController.m */; };
+		CE05243A272AC82A00F91C56 /* VerticalReverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052426272AC82900F91C56 /* VerticalReverseViewController.m */; };
+		CE05243B272AC82A00F91C56 /* VerticalObverseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE052427272AC82900F91C56 /* VerticalObverseViewController.m */; };
+		CE05243C272AC82A00F91C56 /* VerticalLoadmoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242A272AC82900F91C56 /* VerticalLoadmoreView.m */; };
+		CE05243D272AC82A00F91C56 /* HorizontalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */; };
+		CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242F272AC82900F91C56 /* NSString+Category.m */; };
+		CE4AD77327311521004B9822 /* ObverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77227311521004B9822 /* ObverseTableViewController.swift */; };
+		CE4AD77527311D9F004B9822 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77427311D9F004B9822 /* TableViewCell.swift */; };
+		CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */; };
+		CE7A2F762732A4BD001E5F94 /* UIScrollView+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */; };
+		CE9F0966272FDE290043DB2B /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0965272FDE290043DB2B /* NavigationController.m */; };
+		CECA572E2728E74E00B98A5B /* Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CECA57202728E74D00B98A5B /* Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CECA57392728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */; };
+		CEEF9B812731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */; };
+		CEEF9B8427316508004E7832 /* Refreshment+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */; };
+		CEEF9B8527316508004E7832 /* Refreshment+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */; };
+		CEEF9B882731878B004E7832 /* UIScrollView+Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEEF9B892731878B004E7832 /* RefreshmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B872731878B004E7832 /* RefreshmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEEF9B8B27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE05240D272AC74400F91C56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CECA57142728E74D00B98A5B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CECA571C2728E74D00B98A5B;
+			remoteInfo = Refreshment;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE05240F272AC74400F91C56 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE05240C272AC74400F91C56 /* Refreshment.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0BAAE606D52EE4D141B8214C /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E66BED4487642242AFBFE97 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C1E575ACEAF13980D31C93A5 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+		CE0523F1272AC6E800F91C56 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0523F3272AC6E800F91C56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE0523F4272AC6E800F91C56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE0523FD272AC6E800F91C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE0523FF272AC6EC00F91C56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE052402272AC6EC00F91C56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE052404272AC6EC00F91C56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE052405272AC6EC00F91C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE052410272AC82800F91C56 /* HorizontalObverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalObverseViewController.h; sourceTree = "<group>"; };
+		CE052413272AC82900F91C56 /* VerticalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalCollectionViewCell.m; sourceTree = "<group>"; };
+		CE052414272AC82900F91C56 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE052416272AC82900F91C56 /* HorizontalCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalCollectionViewCell.m; sourceTree = "<group>"; };
+		CE052417272AC82900F91C56 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		CE052419272AC82900F91C56 /* HorizontalLoadmoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalLoadmoreView.m; sourceTree = "<group>"; };
+		CE05241A272AC82900F91C56 /* VerticalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalCollectionViewCell.h; sourceTree = "<group>"; };
+		CE05241B272AC82900F91C56 /* VerticalRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalRefreshView.m; sourceTree = "<group>"; };
+		CE05241C272AC82900F91C56 /* VerticalReverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalReverseViewController.h; sourceTree = "<group>"; };
+		CE05241D272AC82900F91C56 /* HorizontalReverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalReverseViewController.m; sourceTree = "<group>"; };
+		CE05241E272AC82900F91C56 /* HorizontalReverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalReverseViewController.h; sourceTree = "<group>"; };
+		CE05241F272AC82900F91C56 /* HorizontalRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalRefreshView.h; sourceTree = "<group>"; };
+		CE052421272AC82900F91C56 /* VerticalLoadmoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalLoadmoreView.h; sourceTree = "<group>"; };
+		CE052422272AC82900F91C56 /* VerticalObverseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalObverseViewController.h; sourceTree = "<group>"; };
+		CE052423272AC82900F91C56 /* HorizontalObverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalObverseViewController.m; sourceTree = "<group>"; };
+		CE052425272AC82900F91C56 /* VerticalRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalRefreshView.h; sourceTree = "<group>"; };
+		CE052426272AC82900F91C56 /* VerticalReverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalReverseViewController.m; sourceTree = "<group>"; };
+		CE052427272AC82900F91C56 /* VerticalObverseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalObverseViewController.m; sourceTree = "<group>"; };
+		CE052428272AC82900F91C56 /* HorizontalCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalCollectionViewCell.h; sourceTree = "<group>"; };
+		CE05242A272AC82900F91C56 /* VerticalLoadmoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalLoadmoreView.m; sourceTree = "<group>"; };
+		CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalRefreshView.m; sourceTree = "<group>"; };
+		CE05242D272AC82900F91C56 /* HorizontalLoadmoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalLoadmoreView.h; sourceTree = "<group>"; };
+		CE05242E272AC82900F91C56 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE05242F272AC82900F91C56 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		CE4AD77127311520004B9822 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		CE4AD77227311521004B9822 /* ObverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObverseTableViewController.swift; sourceTree = "<group>"; };
+		CE4AD77427311D9F004B9822 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTableViewController.swift; sourceTree = "<group>"; };
+		CE9F0964272FDE290043DB2B /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		CE9F0965272FDE290043DB2B /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		CECA571D2728E74D00B98A5B /* Refreshment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Refreshment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CECA57202728E74D00B98A5B /* Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Refreshment.h; sourceTree = "<group>"; };
+		CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RefreshmentPrivate.h"; sourceTree = "<group>"; };
+		CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RefreshmentPrivate.m"; sourceTree = "<group>"; };
+		CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RefreshmentView+RefreshmentPrivate.m"; sourceTree = "<group>"; };
+		CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPrivate.h"; sourceTree = "<group>"; };
+		CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Refreshment+RefreshmentPrivate.m"; sourceTree = "<group>"; };
+		CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refreshment.h"; sourceTree = "<group>"; };
+		CEEF9B872731878B004E7832 /* RefreshmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshmentView.h; sourceTree = "<group>"; };
+		CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefreshmentView+RefreshmentPrivate.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE0523EE272AC6E800F91C56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE05240B272AC74400F91C56 /* Refreshment.framework in Frameworks */,
+				1B267D8C392BB479B73C2C6D /* Pods_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECA571A2728E74D00B98A5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AFEDA8052C9D0E836492CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E66BED4487642242AFBFE97 /* Pods-Example.debug.xcconfig */,
+				C1E575ACEAF13980D31C93A5 /* Pods-Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE0523F2272AC6E800F91C56 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				CE9F0964272FDE290043DB2B /* NavigationController.h */,
+				CE9F0965272FDE290043DB2B /* NavigationController.m */,
+				CE05242D272AC82900F91C56 /* HorizontalLoadmoreView.h */,
+				CE052419272AC82900F91C56 /* HorizontalLoadmoreView.m */,
+				CE05241F272AC82900F91C56 /* HorizontalRefreshView.h */,
+				CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */,
+				CE052421272AC82900F91C56 /* VerticalLoadmoreView.h */,
+				CE05242A272AC82900F91C56 /* VerticalLoadmoreView.m */,
+				CE052425272AC82900F91C56 /* VerticalRefreshView.h */,
+				CE05241B272AC82900F91C56 /* VerticalRefreshView.m */,
+				CE052410272AC82800F91C56 /* HorizontalObverseViewController.h */,
+				CE052423272AC82900F91C56 /* HorizontalObverseViewController.m */,
+				CE05241E272AC82900F91C56 /* HorizontalReverseViewController.h */,
+				CE05241D272AC82900F91C56 /* HorizontalReverseViewController.m */,
+				CE052422272AC82900F91C56 /* VerticalObverseViewController.h */,
+				CE052427272AC82900F91C56 /* VerticalObverseViewController.m */,
+				CE05241C272AC82900F91C56 /* VerticalReverseViewController.h */,
+				CE052426272AC82900F91C56 /* VerticalReverseViewController.m */,
+				CE052428272AC82900F91C56 /* HorizontalCollectionViewCell.h */,
+				CE052416272AC82900F91C56 /* HorizontalCollectionViewCell.m */,
+				CE05241A272AC82900F91C56 /* VerticalCollectionViewCell.h */,
+				CE052413272AC82900F91C56 /* VerticalCollectionViewCell.m */,
+				CE4AD77427311D9F004B9822 /* TableViewCell.swift */,
+				CE4AD77227311521004B9822 /* ObverseTableViewController.swift */,
+				CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */,
+				CE0523F3272AC6E800F91C56 /* AppDelegate.h */,
+				CE0523F4272AC6E800F91C56 /* AppDelegate.m */,
+				CE0523FF272AC6EC00F91C56 /* Assets.xcassets */,
+				CE052404272AC6EC00F91C56 /* Info.plist */,
+				CE052401272AC6EC00F91C56 /* LaunchScreen.storyboard */,
+				CE052405272AC6EC00F91C56 /* main.m */,
+				CE0523FC272AC6E800F91C56 /* Main.storyboard */,
+				CE052417272AC82900F91C56 /* NSString+Category.h */,
+				CE05242F272AC82900F91C56 /* NSString+Category.m */,
+				CE05242E272AC82900F91C56 /* ViewController.h */,
+				CE052414272AC82900F91C56 /* ViewController.m */,
+				CE4AD77127311520004B9822 /* Example-Bridging-Header.h */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		CE05240A272AC74400F91C56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BAAE606D52EE4D141B8214C /* Pods_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CECA57132728E74D00B98A5B = {
+			isa = PBXGroup;
+			children = (
+				CECA571F2728E74D00B98A5B /* Refreshment */,
+				CE0523F2272AC6E800F91C56 /* Example */,
+				CECA571E2728E74D00B98A5B /* Products */,
+				CE05240A272AC74400F91C56 /* Frameworks */,
+				6AFEDA8052C9D0E836492CC2 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CECA571E2728E74D00B98A5B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CECA571D2728E74D00B98A5B /* Refreshment.framework */,
+				CE0523F1272AC6E800F91C56 /* Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CECA571F2728E74D00B98A5B /* Refreshment */ = {
+			isa = PBXGroup;
+			children = (
+				CECA57202728E74D00B98A5B /* Refreshment.h */,
+				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
+				CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */,
+				CEEF9B872731878B004E7832 /* RefreshmentView.h */,
+				CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */,
+				CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */,
+				CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */,
+				CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */,
+				CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */,
+			);
+			path = Refreshment;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CECA57182728E74D00B98A5B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF9B8427316508004E7832 /* Refreshment+RefreshmentPrivate.h in Headers */,
+				CECA57392728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h in Headers */,
+				CEEF9B882731878B004E7832 /* UIScrollView+Refreshment.h in Headers */,
+				CECA572E2728E74E00B98A5B /* Refreshment.h in Headers */,
+				CEEF9B892731878B004E7832 /* RefreshmentView.h in Headers */,
+				CEEF9B8B27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CE0523F0272AC6E800F91C56 /* Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE052407272AC6EC00F91C56 /* Build configuration list for PBXNativeTarget "Example" */;
+			buildPhases = (
+				71892FA788D12E04184B11A2 /* [CP] Check Pods Manifest.lock */,
+				CE0523ED272AC6E800F91C56 /* Sources */,
+				CE0523EE272AC6E800F91C56 /* Frameworks */,
+				CE0523EF272AC6E800F91C56 /* Resources */,
+				CE05240F272AC74400F91C56 /* Embed Frameworks */,
+				B80E42DA583FB4F58C23AB8B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE05240E272AC74400F91C56 /* PBXTargetDependency */,
+			);
+			name = Example;
+			productName = Example;
+			productReference = CE0523F1272AC6E800F91C56 /* Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CECA571C2728E74D00B98A5B /* Refreshment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CECA57312728E74E00B98A5B /* Build configuration list for PBXNativeTarget "Refreshment" */;
+			buildPhases = (
+				CECA57182728E74D00B98A5B /* Headers */,
+				CECA57192728E74D00B98A5B /* Sources */,
+				CECA571A2728E74D00B98A5B /* Frameworks */,
+				CECA571B2728E74D00B98A5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Refreshment;
+			productName = Refreshment;
+			productReference = CECA571D2728E74D00B98A5B /* Refreshment.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CECA57142728E74D00B98A5B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					CE0523F0272AC6E800F91C56 = {
+						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1310;
+					};
+					CECA571C2728E74D00B98A5B = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = CECA57172728E74D00B98A5B /* Build configuration list for PBXProject "Refreshment" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CECA57132728E74D00B98A5B;
+			productRefGroup = CECA571E2728E74D00B98A5B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CECA571C2728E74D00B98A5B /* Refreshment */,
+				CE0523F0272AC6E800F91C56 /* Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE0523EF272AC6E800F91C56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE052403272AC6EC00F91C56 /* LaunchScreen.storyboard in Resources */,
+				CE052400272AC6EC00F91C56 /* Assets.xcassets in Resources */,
+				CE0523FE272AC6E800F91C56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECA571B2728E74D00B98A5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71892FA788D12E04184B11A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B80E42DA583FB4F58C23AB8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE0523ED272AC6E800F91C56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4AD77327311521004B9822 /* ObverseTableViewController.swift in Sources */,
+				CE05243C272AC82A00F91C56 /* VerticalLoadmoreView.m in Sources */,
+				CE05243B272AC82A00F91C56 /* VerticalObverseViewController.m in Sources */,
+				CE05243D272AC82A00F91C56 /* HorizontalRefreshView.m in Sources */,
+				CE052433272AC82A00F91C56 /* HorizontalCollectionViewCell.m in Sources */,
+				CE052435272AC82A00F91C56 /* VerticalRefreshView.m in Sources */,
+				CE052434272AC82A00F91C56 /* HorizontalLoadmoreView.m in Sources */,
+				CE052431272AC82A00F91C56 /* VerticalCollectionViewCell.m in Sources */,
+				CE05243A272AC82A00F91C56 /* VerticalReverseViewController.m in Sources */,
+				CE0523F5272AC6E800F91C56 /* AppDelegate.m in Sources */,
+				CE052406272AC6EC00F91C56 /* main.m in Sources */,
+				CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */,
+				CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */,
+				CE052436272AC82A00F91C56 /* HorizontalReverseViewController.m in Sources */,
+				CE9F0966272FDE290043DB2B /* NavigationController.m in Sources */,
+				CE4AD77527311D9F004B9822 /* TableViewCell.swift in Sources */,
+				CE052438272AC82A00F91C56 /* HorizontalObverseViewController.m in Sources */,
+				CE052432272AC82A00F91C56 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CECA57192728E74D00B98A5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEEF9B8527316508004E7832 /* Refreshment+RefreshmentPrivate.m in Sources */,
+				CEEF9B812731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m in Sources */,
+				CE7A2F762732A4BD001E5F94 /* UIScrollView+RefreshmentPrivate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE05240E272AC74400F91C56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CECA571C2728E74D00B98A5B /* Refreshment */;
+			targetProxy = CE05240D272AC74400F91C56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE0523FC272AC6E800F91C56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0523FD272AC6E800F91C56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE052401272AC6EC00F91C56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE052402272AC6EC00F91C56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE052408272AC6EC00F91C56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E66BED4487642242AFBFE97 /* Pods-Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.refreshment.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE052409272AC6EC00F91C56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E575ACEAF13980D31C93A5 /* Pods-Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Example/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.refreshment.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Example/Example-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CECA572F2728E74E00B98A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CECA57302728E74E00B98A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CECA57322728E74E00B98A5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.refreshment;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CECA57332728E74E00B98A5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.refreshment;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE052407272AC6EC00F91C56 /* Build configuration list for PBXNativeTarget "Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE052408272AC6EC00F91C56 /* Debug */,
+				CE052409272AC6EC00F91C56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECA57172728E74D00B98A5B /* Build configuration list for PBXProject "Refreshment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECA572F2728E74E00B98A5B /* Debug */,
+				CECA57302728E74E00B98A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CECA57312728E74E00B98A5B /* Build configuration list for PBXNativeTarget "Refreshment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CECA57322728E74E00B98A5B /* Debug */,
+				CECA57332728E74E00B98A5B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CECA57142728E74D00B98A5B /* Project object */;
+}
