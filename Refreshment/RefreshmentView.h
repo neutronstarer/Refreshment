@@ -17,23 +17,23 @@ typedef NS_ENUM(NSInteger, RefreshmentState) {
 
 @interface RefreshmentView : UIView
 
-/// state
+/// Current state.
 @property (nonatomic, assign          ) RefreshmentState state;
-/// Trigger automatically without user interaction
+/// Trigger automatically when `visiblePercent` equal to `triggerPercent` without user interaction.
 @property (nonatomic, assign          ) BOOL             automatic;
-/// Adjust view postion when scroll view be adjusted by safe area.
+/// Adjust view postion when scroll view content is adjusted by safe area.
 @property (nonatomic, assign          ) BOOL             adjustable;
-/// Trigger percent. default 1, means trigger when view displayed fully (visibleAreaPercent=1).
+/// Trigger percent. default 1.0, means trigger if view displayed fully (`visiblePercent` = 1).
 @property (nonatomic, assign          ) CGFloat          triggerPercent;
-/// visible percent of view, when visiblePercent >=triggerPercent, state may be changed to RefreshmentStatePending or RefreshmentStateLoading when automatic is true.
+/// Visible percent of view, state may be changed to `RefreshmentStatePending` when visiblePercent >=triggerPercent, or `RefreshmentStateLoading` when automatic is true.
 @property (nonatomic, assign, readonly) CGFloat          visiblePercent;
-/// trigger block
+/// Trigger block.
 @property (nonatomic, copy, nullable  ) void(^trigger)(__kindof RefreshmentView *view);
 
-/// begin
+/// Begin refreshing. State should be change to `RefreshmentStateLoading`, and trigger works.
 - (void)begin;
 
-/// end
+/// end refreshing. State should be change to `RefreshmentStateIdle`.
 - (void)end;
 
 @end
