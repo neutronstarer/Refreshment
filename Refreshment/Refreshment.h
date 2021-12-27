@@ -4,7 +4,7 @@
 //
 //  Created by neutronstarer on 2021/10/28.
 //
-
+@import Foundation;
 //! Project version number for Refreshment.
 FOUNDATION_EXPORT double RefreshmentVersionNumber;
 
