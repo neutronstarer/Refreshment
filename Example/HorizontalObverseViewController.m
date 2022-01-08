@@ -70,6 +70,7 @@
                     [self.models addObject:[NSString randomString]];
                     [indexPaths addObject:[NSIndexPath indexPathForItem:count+i inSection:0]];
                 }
+                
                 [scrollView performBatchUpdates:^{
                     [scrollView insertItemsAtIndexPaths:indexPaths];
                 } completion:^(BOOL finished) {

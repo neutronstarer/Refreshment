@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, RefreshmentState) {
 };
 
 @interface RefreshmentView : UIView
-
+ 
 /// Current state.
 @property (nonatomic, assign          ) RefreshmentState state;
 /// Trigger automatically when `visiblePercent` equal to `triggerPercent` without user interaction.
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, RefreshmentState) {
 /// Begin refreshing. State should be change to `RefreshmentStateLoading`, and trigger works.
 - (void)begin;
 
-/// end refreshing. State should be change to `RefreshmentStateIdle`.
+/// End refreshing. State should be change to `RefreshmentStateIdle`.
 - (void)end;
 
 @end
