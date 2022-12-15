@@ -15,7 +15,7 @@ FOUNDATION_EXPORT const unsigned char RefreshmentVersionString[];
 
 #import <Refreshment/RefreshmentView.h>
 #import <Refreshment/UIScrollView+Refreshment.h>
-#import <Refreshment/Refreshment+RefreshmentPublic.h>
+#import <Refreshment/Refreshment+Refreshment.h>
 
 
 

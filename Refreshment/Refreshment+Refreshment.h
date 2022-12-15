@@ -1,11 +1,13 @@
 //
-//  Refreshment+RefreshmentPublic.h
+//  Refreshment+Refreshment.h
 //  Refreshment
 //
 //  Created by neutronstarer on 2021/12/18.
 //
 
-#import "RefreshmentView.h"
+@import Foundation;
+
+@class RefreshmentView;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -5,7 +5,8 @@
 //  Created by neutronstarer on 2021/11/2.
 //
 
-#import "Refreshment+RefreshmentPublic.h"
+#import "Refreshment+Refreshment.h"
+#import "RefreshmentView+RefreshmentPrivate.h"
 
 @interface RefreshmentView()
 

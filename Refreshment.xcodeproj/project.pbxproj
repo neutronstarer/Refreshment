@@ -27,17 +27,17 @@
 		CE05243C272AC82A00F91C56 /* VerticalLoadmoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242A272AC82900F91C56 /* VerticalLoadmoreView.m */; };
 		CE05243D272AC82A00F91C56 /* HorizontalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */; };
 		CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242F272AC82900F91C56 /* NSString+Category.m */; };
-		CE2775E8276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE2775E8276CFEB2006ADA01 /* Refreshment+Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE4AD77327311521004B9822 /* ObverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77227311521004B9822 /* ObverseTableViewController.swift */; };
 		CE4AD77527311D9F004B9822 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77427311D9F004B9822 /* TableViewCell.swift */; };
 		CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */; };
-		CE7A2F762732A4BD001E5F94 /* UIScrollView+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */; };
+		CE7A2F762732A4BD001E5F94 /* UIScrollView+Refreshment.m in Sources */ = {isa = PBXBuildFile; fileRef = CECA573C2728EBFC00B98A5B /* UIScrollView+Refreshment.m */; };
 		CE9F0966272FDE290043DB2B /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0965272FDE290043DB2B /* NavigationController.m */; };
 		CECA572E2728E74E00B98A5B /* Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CECA57202728E74D00B98A5B /* Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CECA57392728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */; };
-		CEEF9B812731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */; };
+		CEEF9B812731641B004E7832 /* RefreshmentView+Refreshment.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B7F2731641B004E7832 /* RefreshmentView+Refreshment.m */; };
 		CEEF9B8427316508004E7832 /* Refreshment+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */; };
-		CEEF9B8527316508004E7832 /* Refreshment+RefreshmentPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */; };
+		CEEF9B8527316508004E7832 /* Refreshment+Refreshment.m in Sources */ = {isa = PBXBuildFile; fileRef = CEEF9B8327316508004E7832 /* Refreshment+Refreshment.m */; };
 		CEEF9B882731878B004E7832 /* UIScrollView+Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEEF9B892731878B004E7832 /* RefreshmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B872731878B004E7832 /* RefreshmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEEF9B8B27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */; };
@@ -103,24 +103,24 @@
 		CE05242D272AC82900F91C56 /* HorizontalLoadmoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalLoadmoreView.h; sourceTree = "<group>"; };
 		CE05242E272AC82900F91C56 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		CE05242F272AC82900F91C56 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
-		CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPublic.h"; sourceTree = "<group>"; };
+		CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+Refreshment.h"; sourceTree = "<group>"; };
 		CE2775EA276CFFFD006ADA01 /* RefreshmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshmentView.h; sourceTree = "<group>"; };
 		CE2775EB276CFFFD006ADA01 /* UIScrollView+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refreshment.h"; sourceTree = "<group>"; };
-		CE2775EC276CFFFD006ADA01 /* Refreshment+RefreshmentPublic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPublic.h"; sourceTree = "<group>"; };
 		CE4AD77127311520004B9822 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE4AD77227311521004B9822 /* ObverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObverseTableViewController.swift; sourceTree = "<group>"; };
 		CE4AD77427311D9F004B9822 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTableViewController.swift; sourceTree = "<group>"; };
+		CE664F3C294AF6B900F22BB5 /* Refreshment+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+Refreshment.h"; sourceTree = "<group>"; };
 		CE938892276CF5FE000FD2CF /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		CE9F0964272FDE290043DB2B /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		CE9F0965272FDE290043DB2B /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		CECA571D2728E74D00B98A5B /* Refreshment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Refreshment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECA57202728E74D00B98A5B /* Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Refreshment.h; sourceTree = "<group>"; };
 		CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+RefreshmentPrivate.h"; sourceTree = "<group>"; };
-		CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+RefreshmentPrivate.m"; sourceTree = "<group>"; };
-		CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RefreshmentView+RefreshmentPrivate.m"; sourceTree = "<group>"; };
+		CECA573C2728EBFC00B98A5B /* UIScrollView+Refreshment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refreshment.m"; sourceTree = "<group>"; };
+		CEEF9B7F2731641B004E7832 /* RefreshmentView+Refreshment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RefreshmentView+Refreshment.m"; sourceTree = "<group>"; };
 		CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+RefreshmentPrivate.h"; sourceTree = "<group>"; };
-		CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Refreshment+RefreshmentPrivate.m"; sourceTree = "<group>"; };
+		CEEF9B8327316508004E7832 /* Refreshment+Refreshment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Refreshment+Refreshment.m"; sourceTree = "<group>"; };
 		CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refreshment.h"; sourceTree = "<group>"; };
 		CEEF9B872731878B004E7832 /* RefreshmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshmentView.h; sourceTree = "<group>"; };
 		CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RefreshmentView+RefreshmentPrivate.h"; sourceTree = "<group>"; };
@@ -210,11 +210,21 @@
 		CE2775E9276CFF51006ADA01 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CE2775EC276CFFFD006ADA01 /* Refreshment+RefreshmentPublic.h */,
+				CE664F3C294AF6B900F22BB5 /* Refreshment+Refreshment.h */,
 				CE2775EA276CFFFD006ADA01 /* RefreshmentView.h */,
 				CE2775EB276CFFFD006ADA01 /* UIScrollView+Refreshment.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		CE664F3D294AF6F000F22BB5 /* private */ = {
+			isa = PBXGroup;
+			children = (
+				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
+				CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */,
+				CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */,
+			);
+			path = private;
 			sourceTree = "<group>";
 		};
 		CECA57132728E74D00B98A5B = {
@@ -241,17 +251,15 @@
 		CECA571F2728E74D00B98A5B /* Refreshment */ = {
 			isa = PBXGroup;
 			children = (
+				CE664F3D294AF6F000F22BB5 /* private */,
 				CE2775E9276CFF51006ADA01 /* include */,
 				CECA57202728E74D00B98A5B /* Refreshment.h */,
-				CE2775E7276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h */,
-				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
-				CEEF9B8327316508004E7832 /* Refreshment+RefreshmentPrivate.m */,
+				CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */,
+				CEEF9B8327316508004E7832 /* Refreshment+Refreshment.m */,
 				CEEF9B872731878B004E7832 /* RefreshmentView.h */,
-				CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */,
-				CEEF9B7F2731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m */,
+				CEEF9B7F2731641B004E7832 /* RefreshmentView+Refreshment.m */,
 				CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */,
-				CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */,
-				CECA573C2728EBFC00B98A5B /* UIScrollView+RefreshmentPrivate.m */,
+				CECA573C2728EBFC00B98A5B /* UIScrollView+Refreshment.m */,
 			);
 			path = Refreshment;
 			sourceTree = "<group>";
@@ -264,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEEF9B8427316508004E7832 /* Refreshment+RefreshmentPrivate.h in Headers */,
-				CE2775E8276CFEB2006ADA01 /* Refreshment+RefreshmentPublic.h in Headers */,
+				CE2775E8276CFEB2006ADA01 /* Refreshment+Refreshment.h in Headers */,
 				CECA57392728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h in Headers */,
 				CEEF9B882731878B004E7832 /* UIScrollView+Refreshment.h in Headers */,
 				CECA572E2728E74E00B98A5B /* Refreshment.h in Headers */,
@@ -322,7 +330,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					CE0523F0272AC6E800F91C56 = {
 						CreatedOnToolsVersion = 13.0;
@@ -444,9 +452,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEEF9B8527316508004E7832 /* Refreshment+RefreshmentPrivate.m in Sources */,
-				CEEF9B812731641B004E7832 /* RefreshmentView+RefreshmentPrivate.m in Sources */,
-				CE7A2F762732A4BD001E5F94 /* UIScrollView+RefreshmentPrivate.m in Sources */,
+				CEEF9B8527316508004E7832 /* Refreshment+Refreshment.m in Sources */,
+				CEEF9B812731641B004E7832 /* RefreshmentView+Refreshment.m in Sources */,
+				CE7A2F762732A4BD001E5F94 /* UIScrollView+Refreshment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,7 +505,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -530,7 +538,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -597,7 +605,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -653,7 +661,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -677,7 +685,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -707,7 +715,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
