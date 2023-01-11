@@ -148,6 +148,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     if (!view){
         [self removeObservers];
+        _top = nil;
         return;
     }
     [scrollView addSubview:view];
@@ -166,6 +167,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     if (!view){
         [self removeObservers];
+        _left = nil;
         return;
     }
     [scrollView addSubview:view];
@@ -184,6 +186,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     if (!view){
         [self removeObservers];
+        _bottom = nil;
         return;
     }
     [scrollView addSubview:view];
@@ -202,6 +205,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     if (!view){
         [self removeObservers];
+        _right = nil;
         return;
     }
     [scrollView addSubview:view];
