@@ -68,6 +68,9 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     if (!self.observed){
         return;
     }
+    if (self.top || self.left || self.bottom || self.right){
+        return;
+    }
     [self removeObserver:self forKeyPath:@"scrollView.panGestureRecognizer.state" context:panStateKey];
     [self removeObserver:self forKeyPath:@"scrollView.bounds" context:boundsKey];
     [self removeObserver:self forKeyPath:@"scrollView.contentSize" context:contentSizeKey];
