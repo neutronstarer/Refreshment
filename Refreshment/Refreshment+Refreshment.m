@@ -329,17 +329,18 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     view = self.left;
     if (view && !view.hidden){
-        view.visiblePercent = -(contentOffset.x+adjustedContentInset.left+(view.adjustable?additionalContentInset.left:0))/view.frame.size.width;
+        view.visiblePercent =
+        -(contentOffset.x+adjustedContentInset.left+(view.adjustable?additionalContentInset.left:0))/view.frame.size.width;
         tryTrigger(scrollView, view);
     }
     view = self.bottom;
     if (view && !view.hidden){
-        view.visiblePercent = (contentOffset.y-((fmax(scrollView.contentSize.height, scrollView.bounds.size.height))-scrollView.bounds.size.height)-adjustedContentInset.bottom-(view.adjustable?additionalContentInset.bottom:0))/view.frame.size.height;
+        view.visiblePercent = (contentOffset.y-((fmax(scrollView.contentSize.height, scrollView.bounds.size.height))-scrollView.bounds.size.height)-additionalContentInset.bottom-(view.adjustable?additionalContentInset.bottom:0))/view.frame.size.height;
         tryTrigger(scrollView, view);
     }
     view = self.right;
     if (view && !view.hidden){
-        view.visiblePercent = (contentOffset.x-((fmax(scrollView.contentSize.width, scrollView.bounds.size.height))-scrollView.bounds.size.width)-adjustedContentInset.right-(view.adjustable?additionalContentInset.right:0))/view.frame.size.width;
+        view.visiblePercent = (contentOffset.x-((fmax(scrollView.contentSize.width, scrollView.bounds.size.height))-scrollView.bounds.size.width)-additionalContentInset.right-(view.adjustable?additionalContentInset.right:0))/view.frame.size.width;
         tryTrigger(scrollView, view);
     }
 }
