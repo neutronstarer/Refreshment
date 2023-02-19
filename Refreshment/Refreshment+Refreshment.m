@@ -306,7 +306,6 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
                     [view begin];
                 }
             }
-            NSLog(@"%.2f", view.visiblePercent);
             return;
         }
         if (scrollView.dragging){
@@ -321,34 +320,30 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
             }
         }
     };
-    UIEdgeInsets contentInset = self.scrollView.contentInset;
+    UIEdgeInsets contentInset = self.contentInset;
     UIEdgeInsets additionalContentInset = self.additionalContentInset;
     RefreshmentView *view = self.top;
     if (view && !view.hidden){
-        if (view.automatic){
-            view.visiblePercent = -(contentOffset.y+contentInset.top)/view.frame.size.height;
-        }else{
-            view.visiblePercent = -(contentOffset.y+contentInset.top+additionalContentInset.top+(view.adjustable?additionalContentInset.top:0))/view.frame.size.height;
-        }
+        CGFloat offset = -(contentOffset.y+contentInset.top+additionalContentInset.top+(view.adjustable?additionalContentInset.top:0));
+        view.visiblePercent = offset/view.bounds.size.height;
         tryTrigger(scrollView, view);
     }
     view = self.left;
     if (view && !view.hidden){
-        if (view.automatic){
-            view.visiblePercent = -(contentOffset.x+contentInset.left)/view.frame.size.width;
-        }else{
-            view.visiblePercent = -(contentOffset.x+contentInset.left+additionalContentInset.left+(view.adjustable?additionalContentInset.left:0))/view.frame.size.width;
-        }
+        CGFloat offset = -(contentOffset.x+contentInset.left+additionalContentInset.left+(view.adjustable?additionalContentInset.left:0));
+        view.visiblePercent = offset/view.bounds.size.width;
         tryTrigger(scrollView, view);
     }
     view = self.bottom;
     if (view && !view.hidden){
-        view.visiblePercent = (contentOffset.y-((fmax(scrollView.contentSize.height, scrollView.bounds.size.height))-scrollView.bounds.size.height)-additionalContentInset.bottom-(view.adjustable?additionalContentInset.bottom:0))/view.frame.size.height;
+        CGFloat offset = contentOffset.y-((fmax(scrollView.contentSize.height, scrollView.bounds.size.height))-scrollView.bounds.size.height)-contentInset.bottom-additionalContentInset.bottom-(view.adjustable?additionalContentInset.bottom:0);
+        view.visiblePercent = offset/view.frame.size.height;
         tryTrigger(scrollView, view);
     }
     view = self.right;
     if (view && !view.hidden){
-        view.visiblePercent = (contentOffset.x-((fmax(scrollView.contentSize.width, scrollView.bounds.size.height))-scrollView.bounds.size.width)-additionalContentInset.right-(view.adjustable?additionalContentInset.right:0))/view.frame.size.width;
+        CGFloat offset = contentOffset.x-((fmax(scrollView.contentSize.width, scrollView.bounds.size.width))-scrollView.bounds.size.width)-contentInset.right-additionalContentInset.right-(view.adjustable?additionalContentInset.right:0);
+        view.visiblePercent = offset/view.frame.size.width;
         tryTrigger(scrollView, view);
     }
 }

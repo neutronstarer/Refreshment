@@ -15,11 +15,17 @@ class ReverseTableViewController: UITableViewController {
     
     private var models = [String]()
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+//        tableView.translatesAutoresizingMaskIntoConstraints = true
+//        tableView.frame = CGRectMake(0, 200, tableView.bounds.width, 500)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 50
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
+        tableView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0)
         tableView.rf.top = {
             let v = VerticalRefreshView()
             v.automatic = true
