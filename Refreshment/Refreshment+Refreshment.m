@@ -306,6 +306,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
                     [view begin];
                 }
             }
+            NSLog(@"%.2f", view.visiblePercent);
             return;
         }
         if (scrollView.dragging){
@@ -320,17 +321,24 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
             }
         }
     };
-    UIEdgeInsets adjustedContentInset = self.scrollView.adjustedContentInset;
+    UIEdgeInsets contentInset = self.scrollView.contentInset;
     UIEdgeInsets additionalContentInset = self.additionalContentInset;
     RefreshmentView *view = self.top;
     if (view && !view.hidden){
-        view.visiblePercent = -(contentOffset.y+adjustedContentInset.top+(view.adjustable?additionalContentInset.top:0))/view.frame.size.height;
+        if (view.automatic){
+            view.visiblePercent = -(contentOffset.y+contentInset.top)/view.frame.size.height;
+        }else{
+            view.visiblePercent = -(contentOffset.y+contentInset.top+additionalContentInset.top+(view.adjustable?additionalContentInset.top:0))/view.frame.size.height;
+        }
         tryTrigger(scrollView, view);
     }
     view = self.left;
     if (view && !view.hidden){
-        view.visiblePercent =
-        -(contentOffset.x+adjustedContentInset.left+(view.adjustable?additionalContentInset.left:0))/view.frame.size.width;
+        if (view.automatic){
+            view.visiblePercent = -(contentOffset.x+contentInset.left)/view.frame.size.width;
+        }else{
+            view.visiblePercent = -(contentOffset.x+contentInset.left+additionalContentInset.left+(view.adjustable?additionalContentInset.left:0))/view.frame.size.width;
+        }
         tryTrigger(scrollView, view);
     }
     view = self.bottom;

@@ -19,7 +19,7 @@ class ObverseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 50
-        tableView.contentInset = UIEdgeInsets(top: 88, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: 40, left: 0, bottom: 40, right: 0)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView.rf.top = {
             let v = VerticalRefreshView()
@@ -55,6 +55,7 @@ class ObverseTableViewController: UITableViewController {
         
         tableView.rf.bottom = {
             let v = VerticalLoadmoreView()
+            v.adjustable = true
             v.trigger = { view in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {[weak self] in
                     guard let self = self, let view = view as? VerticalLoadmoreView else {
