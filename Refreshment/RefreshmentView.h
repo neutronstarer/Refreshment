@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger, RefreshmentState) {
 /// End refreshing. State should be change to `RefreshmentStateIdle`.
 - (void)end;
 
-
+/// scroll to display.
 - (void)display:(BOOL)animated;
 
 @end

@@ -156,7 +156,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     __weak typeof(self) weakSelf = self;
     view.onDisplay = ^(BOOL animated){
         __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = -self.contentInset.top-(view.adjustable?self.additionalContentInset.top:0)-self.additionalContentInset.top-self.top.bounds.size.height;
+        CGFloat offset = - self.scrollView.adjustedContentInset.top;
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, offset) animated:animated];
     };
     _top = view;
@@ -181,7 +181,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     __weak typeof(self) weakSelf = self;
     view.onDisplay = ^(BOOL animated){
         __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = -self.contentInset.left-(view.adjustable?self.additionalContentInset.left:0)-self.additionalContentInset.left-self.left.bounds.size.width;
+        CGFloat offset = - self.scrollView.adjustedContentInset.left;
         [self.scrollView setContentOffset:CGPointMake(offset, self.scrollView.contentOffset.y) animated:animated];
     };
     _left = view;
@@ -206,7 +206,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     __weak typeof(self) weakSelf = self;
     view.onDisplay = ^(BOOL animated){
         __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = self.contentInset.bottom+(view.adjustable?self.additionalContentInset.bottom:0)+self.additionalContentInset.bottom+self.bottom.bounds.size.height+(fmax(self.scrollView.contentSize.height, self.scrollView.bounds.size.height))-self.scrollView.bounds.size.height;
+        CGFloat offset = self.scrollView.adjustedContentInset.bottom+(fmax(self.scrollView.contentSize.height, self.scrollView.bounds.size.height))-self.scrollView.bounds.size.height;
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, offset) animated:animated];
     };
     _bottom = view;
@@ -231,7 +231,7 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     __weak typeof(self) weakSelf = self;
     view.onDisplay = ^(BOOL animated){
         __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = self.contentInset.right+(view.adjustable?self.additionalContentInset.right:0)+self.additionalContentInset.right+self.right.bounds.size.width+(fmax(self.scrollView.contentSize.width, self.scrollView.bounds.size.width))-self.scrollView.bounds.size.width;
+        CGFloat offset = self.scrollView.adjustedContentInset.right+(fmax(self.scrollView.contentSize.width, self.scrollView.bounds.size.width))-self.scrollView.bounds.size.width;
         [self.scrollView setContentOffset:CGPointMake(offset, self.scrollView.contentOffset.y) animated:animated];
     };
     _right = view;
