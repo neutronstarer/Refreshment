@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithScrollView:(UIScrollView*)scrollView;
 
+- (void)contentSizeDicChangeTo:(CGSize)size;
+
 - (void)contentInsetDidChangeTo:(UIEdgeInsets)contentInset;
 
 - (void)adjustedContentInsetDidChange API_AVAILABLE(ios(11.0));

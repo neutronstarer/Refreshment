@@ -28,6 +28,7 @@
 		CE05243D272AC82A00F91C56 /* HorizontalRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242B272AC82900F91C56 /* HorizontalRefreshView.m */; };
 		CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = CE05242F272AC82900F91C56 /* NSString+Category.m */; };
 		CE2775E8276CFEB2006ADA01 /* Refreshment+Refreshment.h in Headers */ = {isa = PBXBuildFile; fileRef = CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE486B6829AE28F400A618BA /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE486B6729AE28F400A618BA /* Util.swift */; };
 		CE4AD77327311521004B9822 /* ObverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77227311521004B9822 /* ObverseTableViewController.swift */; };
 		CE4AD77527311D9F004B9822 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD77427311D9F004B9822 /* TableViewCell.swift */; };
 		CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */; };
@@ -106,6 +107,7 @@
 		CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Refreshment+Refreshment.h"; sourceTree = "<group>"; };
 		CE2775EA276CFFFD006ADA01 /* RefreshmentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RefreshmentView.h; sourceTree = "<group>"; };
 		CE2775EB276CFFFD006ADA01 /* UIScrollView+Refreshment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refreshment.h"; sourceTree = "<group>"; };
+		CE486B6729AE28F400A618BA /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		CE4AD77127311520004B9822 /* Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Example-Bridging-Header.h"; sourceTree = "<group>"; };
 		CE4AD77227311521004B9822 /* ObverseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObverseTableViewController.swift; sourceTree = "<group>"; };
 		CE4AD77427311D9F004B9822 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				CE4AD77427311D9F004B9822 /* TableViewCell.swift */,
 				CE4AD77227311521004B9822 /* ObverseTableViewController.swift */,
 				CE4AD7762731252E004B9822 /* ReverseTableViewController.swift */,
+				CE486B6729AE28F400A618BA /* Util.swift */,
 				CE0523F3272AC6E800F91C56 /* AppDelegate.h */,
 				CE0523F4272AC6E800F91C56 /* AppDelegate.m */,
 				CE0523FF272AC6EC00F91C56 /* Assets.xcassets */,
@@ -244,14 +247,14 @@
 				CE2775E9276CFF51006ADA01 /* include */,
 				CECA57202728E74D00B98A5B /* Refreshment.h */,
 				CE2775E7276CFEB2006ADA01 /* Refreshment+Refreshment.h */,
-				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
-				CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */,
-				CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */,
 				CEEF9B8327316508004E7832 /* Refreshment+Refreshment.m */,
+				CEEF9B8227316508004E7832 /* Refreshment+RefreshmentPrivate.h */,
 				CEEF9B872731878B004E7832 /* RefreshmentView.h */,
 				CEEF9B7F2731641B004E7832 /* RefreshmentView+Refreshment.m */,
+				CEEF9B8A27318816004E7832 /* RefreshmentView+RefreshmentPrivate.h */,
 				CEEF9B862731878B004E7832 /* UIScrollView+Refreshment.h */,
 				CECA573C2728EBFC00B98A5B /* UIScrollView+Refreshment.m */,
+				CECA57372728EBCC00B98A5B /* UIScrollView+RefreshmentPrivate.h */,
 			);
 			path = Refreshment;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				CE0523F5272AC6E800F91C56 /* AppDelegate.m in Sources */,
 				CE052406272AC6EC00F91C56 /* main.m in Sources */,
 				CE05243F272AC82A00F91C56 /* NSString+Category.m in Sources */,
+				CE486B6829AE28F400A618BA /* Util.swift in Sources */,
 				CE4AD7772731252E004B9822 /* ReverseTableViewController.swift in Sources */,
 				CE052436272AC82A00F91C56 /* HorizontalReverseViewController.m in Sources */,
 				CE9F0966272FDE290043DB2B /* NavigationController.m in Sources */,

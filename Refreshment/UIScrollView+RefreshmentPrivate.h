@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface UIScrollView (RefreshmentPrivate)
 
 - (void)refreshment_setContentInset:(UIEdgeInsets)contentInset;
+- (void)refreshment_setContentSize:(CGSize)size;
 
 @end
 

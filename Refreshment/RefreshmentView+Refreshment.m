@@ -17,7 +17,6 @@
 @property (nonatomic, weak  ) NSLayoutConstraint *_top2Top;
 @property (nonatomic, weak  ) NSLayoutConstraint *_width2Width;
 @property (nonatomic, weak  ) NSLayoutConstraint *_height2Height;
-@property (nonatomic, copy  ) void(^onDisplay)(BOOL);
 
 @end
 
@@ -84,6 +83,9 @@
 }
 
 - (void)begin{
+    if (self.state == RefreshmentStateLoading){
+        return;
+    }
     self.state = RefreshmentStateLoading;
     if(!self.trigger) {
         return;
@@ -92,12 +94,12 @@
 }
 
 - (void)end{
+    if (self.state == RefreshmentStateIdle){
+        return;
+    }
     self.state = RefreshmentStateIdle;
 }
 
-- (void)display:(BOOL)animated{
-    self.onDisplay(animated);
-}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

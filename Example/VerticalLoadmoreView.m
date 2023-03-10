@@ -12,6 +12,8 @@
 
 @interface VerticalLoadmoreView()
 
+@property (nonatomic, assign) BOOL more;
+
 @end
 
 @implementation VerticalLoadmoreView
@@ -152,6 +154,9 @@
 }
 
 - (void)begin{
+    if (!self.more){
+        return;
+    }
     [UIView animateWithDuration:UINavigationControllerHideShowBarDuration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         [super begin];
     } completion:nil];
@@ -159,7 +164,8 @@
 }
 
 - (void)end:(BOOL)more{
-    self.hidden = !more;
+    self.hidden = false;
+    self.more = more;
 //    [UIView animateWithDuration:UINavigationControllerHideShowBarDuration delay:0 options:UIViewAnimationOptionBeginFromCurrentState animations:^{
         [super end];
 //    } completion:nil];

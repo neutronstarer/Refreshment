@@ -12,7 +12,7 @@
 
 @implementation UIScrollView (RefreshmentPublic)
 
-- (Refreshment *)rf{
+- (Refreshment*)rf{
     Refreshment *v = objc_getAssociatedObject(self, @selector(rf));
     if (v){
         return v;
@@ -22,27 +22,39 @@
     return v;
 }
 
+- (Refreshment*)nullable_rf{
+    Refreshment *v = objc_getAssociatedObject(self, @selector(rf));
+    return v;
+}
+
 - (void)refreshment_setContentInset:(UIEdgeInsets)contentInset{
-    [self.rf contentInsetDidChangeTo:contentInset];
+    [self.nullable_rf contentInsetDidChangeTo:contentInset];
     [self refreshment_setContentInset:contentInset];
 }
 
 - (void)refreshment_adjustedContentInsetDidChange API_AVAILABLE(ios(11.0)){
-    [self.rf adjustedContentInsetDidChange];
+    [self.nullable_rf adjustedContentInsetDidChange];
     [self refreshment_adjustedContentInsetDidChange];
 }
 
 /// fix observer bug below iOS 11.0.
 - (void)refreshment_dealloc{
-    [self.rf removeObservers];
+    [self.nullable_rf removeObservers];
     [self refreshment_dealloc];
+}
+
+- (void)refreshment_setContentSize:(CGSize)contentSize{
+    [self refreshment_setContentSize:contentSize];
+    [self.nullable_rf contentSizeDicChangeTo:contentSize];
 }
 
 + (void)load{
     [self refreshment_swizzleOriginalSelector:@selector(setContentInset:) alteredSelector:@selector(refreshment_setContentInset:)];
-    [self refreshment_swizzleOriginalSelector:NSSelectorFromString([NSString stringWithFormat:@"%@%@",@"dea", @"lloc"]) alteredSelector:@selector(refreshment_dealloc)];
+    [self refreshment_swizzleOriginalSelector:@selector(setContentSize:) alteredSelector:@selector(refreshment_setContentSize:)];
     if (@available(iOS 11.0, *)) {
         [self refreshment_swizzleOriginalSelector:@selector(adjustedContentInsetDidChange) alteredSelector:@selector(refreshment_adjustedContentInsetDidChange)];
+    }else{
+        [self refreshment_swizzleOriginalSelector:NSSelectorFromString([NSString stringWithFormat:@"%@%@",@"dea", @"lloc"]) alteredSelector:@selector(refreshment_dealloc)];
     }
 }
 

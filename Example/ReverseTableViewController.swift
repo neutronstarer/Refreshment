@@ -17,10 +17,10 @@ class ReverseTableViewController: UITableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        tableView.translatesAutoresizingMaskIntoConstraints = true
-//        tableView.frame = CGRectMake(0, 200, tableView.bounds.width, 500)
+        tableView.translatesAutoresizingMaskIntoConstraints = true
+        tableView.frame = CGRectMake(0, 200, tableView.bounds.width, 500)
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 50

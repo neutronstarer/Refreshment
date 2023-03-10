@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak  ) NSLayoutConstraint *_top2Top;
 @property (nonatomic, weak  ) NSLayoutConstraint *_width2Width;
 @property (nonatomic, weak  ) NSLayoutConstraint *_height2Height;
-@property (nonatomic, copy  ) void(^onDisplay)(BOOL);
 
 @end
 

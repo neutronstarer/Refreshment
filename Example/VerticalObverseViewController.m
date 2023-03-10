@@ -39,14 +39,14 @@
                 @strongify(self);
                 UICollectionView *scrollView = (UICollectionView*)view.superview;
                 [self.models removeAllObjects];
-                for (int i=0; i<20; i++){
+                for (int i=0; i<1; i++){
                     [self.models addObject:[NSString randomString]];
                 }
                 [scrollView reloadData];
                 /// fix crash below iOS 11
                 [scrollView.collectionViewLayout invalidateLayout];
                 [view end];
-                [(VerticalLoadmoreView*)scrollView.rf.bottom end:YES];
+                [(VerticalLoadmoreView*)scrollView.rf.bottom end:NO];
             });
         };
         [RACObserve(self.navigationController.navigationBar, hidden) subscribeNext:^(id  _Nullable x) {

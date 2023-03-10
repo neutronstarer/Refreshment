@@ -16,32 +16,35 @@ class ObverseTableViewController: UITableViewController {
     
     private var models = [String]()
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
 //        tableView.translatesAutoresizingMaskIntoConstraints = true
 //        tableView.frame = CGRectMake(0, 200, tableView.bounds.width, 500)
-    }
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 50
-        tableView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0)
+        tableView.estimatedRowHeight = 1000
+//        tableView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 100, right: 0)
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         tableView.rf.top = {
             let v = VerticalRefreshView()
             v.adjustable = true
+            v.automatic = true
+            v.isHidden = true
             v.trigger = {[weak self] view in
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {[weak self] in
+                loadPre {[weak self] data, more in
                     guard let self = self else {
                         return
                     }
-                    self.models.removeAll()
-                    for _ in 0..<20 {
-                        self.models.append(NSString.random() as String)
-                    }
-                    self.tableView.reloadData()
                     view.end()
-                    (self.tableView.rf.bottom as? VerticalLoadmoreView)?.end(true)
+                    let distanceFromOffset = self.tableView.contentSize.height - self.tableView.contentOffset.y
+                    self.models.insert(contentsOf: data, at: 0)
+                    self.tableView.reloadData() // reload tableView
+                    let offset = self.tableView.contentSize.height - distanceFromOffset
+                    self.tableView.layoutIfNeeded()
+                    self.tableView.setContentOffset(CGPoint(x: 0, y: offset), animated: false)
+            
                 }
             }
             self.navigationController?.navigationBar.rx.observe(Bool.self, "hidden").subscribe(onNext: { hidden in
@@ -62,29 +65,31 @@ class ObverseTableViewController: UITableViewController {
         tableView.rf.bottom = {
             let v = VerticalLoadmoreView()
             v.adjustable = true
+            v.automatic = true
+            v.isHidden = true
             v.trigger = { view in
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {[weak self] in
-                    guard let self = self, let view = view as? VerticalLoadmoreView else {
+                loadPre {[weak self] data, more in
+                    guard let self = self else {
                         return
                     }
-                    var indexPaths = [IndexPath]()
-                    for _ in 0..<20 {
-                        indexPaths.append(IndexPath(row: self.models.count, section: 0))
-                        self.models.append(NSString.random() as String)
-                    }
-                    self.tableView.insertRows(at: indexPaths, with: .bottom)
-                    view.end(true)
+                    view.isHidden = more == false
+                    self.models.append(contentsOf: data)
+                    self.tableView.reloadData()
+                    view.end()
                 }
             }
             return v
         }()
-        
-        tableView.rf.top?.begin()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        loadPre {[weak self] data, more in
+            guard let self = self else{
+                return
+            }
+            self.models.append(contentsOf: data)
+            self.tableView.reloadData()
+            self.tableView.rf.top?.isHidden = false
+            self.tableView.rf.bottom?.isHidden = false
+        }
+//        tableView.rf.top?.begin()
     }
     
     // MARK: - Table view data source

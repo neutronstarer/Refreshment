@@ -41,6 +41,8 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
 - (instancetype)initWithScrollView:(UIScrollView *)scrollView{
     self = [self init];
     self.scrollView = scrollView;
+    [self contentInsetDidChangeTo:scrollView.contentInset];
+    [self adjustedContentInsetDidChange];
     return self;
 }
 
@@ -85,6 +87,16 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
         }];
     }];
     self.observed = NO;
+}
+
+- (void)contentSizeDicChangeTo:(CGSize)size{
+    UIScrollView *scrollView = self.scrollView;
+    CGSize expectedSize = CGSizeZero;
+    expectedSize.width = fmax(size.width, scrollView.bounds.size.width);
+    expectedSize.height = fmax(size.height, scrollView.bounds.size.height);
+    if (!CGSizeEqualToSize(scrollView.contentSize, expectedSize)){
+        [scrollView refreshment_setContentSize:expectedSize];
+    }
 }
 
 - (void)contentInsetDidChangeTo:(UIEdgeInsets)contentInset{
@@ -153,12 +165,6 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     [scrollView addSubview:view];
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    __weak typeof(self) weakSelf = self;
-    view.onDisplay = ^(BOOL animated){
-        __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = - self.scrollView.adjustedContentInset.top;
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, offset) animated:animated];
-    };
     _top = view;
     [self addObservers];
 }
@@ -178,12 +184,6 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     [scrollView addSubview:view];
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    __weak typeof(self) weakSelf = self;
-    view.onDisplay = ^(BOOL animated){
-        __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = - self.scrollView.adjustedContentInset.left;
-        [self.scrollView setContentOffset:CGPointMake(offset, self.scrollView.contentOffset.y) animated:animated];
-    };
     _left = view;
     [self addObservers];
 }
@@ -203,12 +203,6 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     [scrollView addSubview:view];
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    __weak typeof(self) weakSelf = self;
-    view.onDisplay = ^(BOOL animated){
-        __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = self.scrollView.adjustedContentInset.bottom+(fmax(self.scrollView.contentSize.height, self.scrollView.bounds.size.height))-self.scrollView.bounds.size.height;
-        [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, offset) animated:animated];
-    };
     _bottom = view;
     [self addObservers];
 }
@@ -228,12 +222,6 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     }
     [scrollView addSubview:view];
     view.translatesAutoresizingMaskIntoConstraints = NO;
-    __weak typeof(self) weakSelf = self;
-    view.onDisplay = ^(BOOL animated){
-        __strong typeof(weakSelf) self = weakSelf;
-        CGFloat offset = self.scrollView.adjustedContentInset.right+(fmax(self.scrollView.contentSize.width, self.scrollView.bounds.size.width))-self.scrollView.bounds.size.width;
-        [self.scrollView setContentOffset:CGPointMake(offset, self.scrollView.contentOffset.y) animated:animated];
-    };
     _right = view;
     [self addObservers];
 }
@@ -242,36 +230,44 @@ typedef NS_ENUM(NSInteger, RefreshmentAdditionalContentInsetAdjustmentReason) {
     UIScrollView *scrollView = self.scrollView;
     RefreshmentView *view    = self.top;
     BOOL adjustable          = view.adjustable;
+    int verticalCount        = 0;
+    int horizontalCount      = 0;
     if (view){
+        verticalCount++;
+        [scrollView sendSubviewToBack:view];
         [view _leading2Leading];
         view._bottom2Top.constant  = -contentInset.top-(adjustable?additionalContentInset.top:0);
         view._width2Width.constant = -contentInset.left-contentInset.right-additionalContentInset.left-additionalContentInset.right;
-        [scrollView sendSubviewToBack:view];
     }
     view       = self.left;
     adjustable = view.adjustable;
     if (view){
+        horizontalCount++;
+        [scrollView sendSubviewToBack:view];
         [view _top2Top];
         view._trailing2Leading.constant = -contentInset.left -(adjustable?additionalContentInset.left:0);
         view._height2Height.constant    = -contentInset.top-contentInset.bottom-additionalContentInset.top-additionalContentInset.bottom;
-        [scrollView sendSubviewToBack:view];
     }
     view       = self.bottom;
     adjustable = view.adjustable;
     if (view){
+        verticalCount++;
+        [scrollView sendSubviewToBack:view];
         [view _leading2Leading];
         view._top2Top.constant     = fmax(contentSize.height, bounds.size.height)+contentInset.bottom+(adjustable?additionalContentInset.bottom:0);
         view._width2Width.constant = -contentInset.left-contentInset.right-additionalContentInset.left-additionalContentInset.right;
-        [scrollView sendSubviewToBack:view];
     }
     view       = self.right;
     adjustable = view.adjustable;
     if (view){
+        horizontalCount++;
+        [scrollView sendSubviewToBack:view];
         [view _top2Top];
         view._leading2Leading.constant = fmax(contentSize.width, bounds.size.width)+contentInset.right+(adjustable?additionalContentInset.right:0);
         view._height2Height.constant   = -contentInset.top-contentInset.bottom-additionalContentInset.top-additionalContentInset.bottom;
-        [scrollView sendSubviewToBack:view];
     }
+    scrollView.alwaysBounceVertical = verticalCount>0;
+    scrollView.alwaysBounceHorizontal = horizontalCount>0;
 }
 
 - (void)adjustContentInsetWithContentInset:(UIEdgeInsets)contentInset additionalContentInset:(UIEdgeInsets)additionalContentInset bounds:(CGRect)bounds contentSize:(CGSize)contentSize{
